@@ -57,7 +57,7 @@ endif
 PKGCONFIG_INCLUDE:=$(shell pkg-config --cflags-only-I $(PKGINCLUDE_PACKAGES))
 
 
-CXXFLAGS += -Wno-deprecated -Winit-self -fno-omit-frame-pointer -std=c++0x -fno-deduce-init-list -I$(NODE_PREFIX)/include/node -msse3 -Ileveldb/include -Wno-unused-but-set-variable -I$(LOCAL_INCLUDE_DIR) -I$(GEN) $(PKGCONFIG_INCLUDE) -Wno-psabi -D__GXX_EXPERIMENTAL_CXX0X__=1 -Wno-unused-local-typedefs -Wno-unused-variable -DNODEJS_ENABLED=$(NODEJS_ENABLED)
+CXXFLAGS += -Wno-deprecated -Winit-self -fno-omit-frame-pointer -std=c++0x -fno-deduce-init-list -I$(NODE_PREFIX)/include/node -msse3 -Ileveldb/include -Wno-unused-but-set-variable -I$(LOCAL_INCLUDE_DIR) -I$(GEN) $(PKGCONFIG_INCLUDE) -Wno-psabi -D__GXX_EXPERIMENTAL_CXX0X__=1 -Wno-unused-local-typedefs -Wno-unused-variable -DNODEJS_ENABLED=$(NODEJS_ENABLED) -w
 CXXLINKFLAGS += -Wl,--copy-dt-needed-entries -Wl,--no-as-needed -L/usr/local/lib
 CFLAGS +=  -Wno-unused-but-set-variable
 
